@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interesting Facts About Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 50px;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        p {
+            font-size: 18px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Click the Button to Know an Interesting Fact About Me</h1>
+        <button onclick="generateFact()">Generate Fact</button>
+        <p id="fact"></p>
+    </div>
+
+    <script>
+        const factsData = {
+            "facts": [
+                "I have completed a diploma in Computer Engineering in 2024.",
+                "I am pursuing a BE in Information Technology at Thakur College of Engineering and Technology.",
+                "I completed an in-house data analytics internship for my college.",
+                "I have completed courses on Python, SQL, and Data Visualization.",
+                "I created a pet adoption website using HTML, CSS, and Bootstrap.",
+                "I love working on frontend projects using HTML, CSS, and JavaScript.",
+                "I am interested in Data Analytics and have completed a 30-hour course on it.",
+                "I have worked on projects related to quantum computing and algebraic structures.",
+                "I have experience using networking tools like Packet Tracer.",
+                "I prefer visually engaging and information-rich static designs for my projects."
+            ]
+        };
+
+        function generateFact() {
+            let facts = factsData.facts;
+            let randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById("fact").textContent = facts[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
